@@ -41,31 +41,30 @@ class MovieCard extends StatelessWidget {
               ),
             ),
             Positioned(
+              top: 0,
               bottom: 30,
-              child: Align(
-                alignment: Alignment.bottomLeft,
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 30.0),
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          title, //"SimzArt",
-                          style: TextStyle(
-                              color: Colors.white.withOpacity(0.9),
-                              fontSize: 20.0,
-                              fontWeight: FontWeight.w600),
-                        ),
-                        const SizedBox(height: 10.0),
-                        Text(
-                          categorias.join(" - "), //"artista - cartunista",
-                          style: TextStyle(
-                              color: Colors.white.withOpacity(0.8),
-                              fontWeight: FontWeight.w100),
-                        ),
-                      ]),
-                ),
-              ),
+              left: 30,
+              right: 0,
+              child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      title, //"SimzArt",
+                      style: TextStyle(
+                          color: Colors.white.withOpacity(0.9),
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.w600),
+                    ),
+                    const SizedBox(height: 10.0),
+                    Text(
+                      categorias.join(" - "), //"artista - cartunista",
+                      style: TextStyle(
+                          color: Colors.white.withOpacity(0.8),
+                          fontWeight: FontWeight.w100),
+                    ),
+                  ]),
             )
           ],
         ),

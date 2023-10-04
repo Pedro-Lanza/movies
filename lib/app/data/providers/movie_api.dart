@@ -12,7 +12,7 @@ class Api {
   Api({@required this.httpClient});
 
   static const _url =
-      'https://api.themoviedb.org/3/movie/popular?api_key=${Constants.apiKey}';
+      'https://api.themoviedb.org/3/movie/popular?language=pt-BR&api_key=${Constants.apiKey}';
 
   Future<List<Movie>> getMovies() async {
     final response = await http.get(Uri.parse(_url));
@@ -22,9 +22,9 @@ class Api {
       List<Movie> detailedMovies = <Movie>[];
       for (dynamic movie in decodedData) {
         final detailsCall = await http.get(Uri.parse(
-            'https://api.themoviedb.org/3/movie/${movie['id']}?api_key=${Constants.apiKey}'));
+            'https://api.themoviedb.org/3/movie/${movie['id']}?language=pt-BR&api_key=${Constants.apiKey}'));
         final castCall = await http.get(Uri.parse(
-            'https://api.themoviedb.org/3/movie/${movie['id']}/credits?api_key=${Constants.apiKey}'));
+            'https://api.themoviedb.org/3/movie/${movie['id']}/credits?language=pt-BR&api_key=${Constants.apiKey}'));
 
         final decodedDetails = json.decode(detailsCall.body);
         final decodedCast = json.decode(castCall.body);
