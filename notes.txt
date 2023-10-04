@@ -1,0 +1,5 @@
+- talk about adding a splash screen
+- talk about how to refresh homepage
+- voltar ao inicio quando clicar em Filmes
+- talk about the filters wrap being horizontally scrollable or not
+- perguntar sobre filtros multi exclusivos ou nao
