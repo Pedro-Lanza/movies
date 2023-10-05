@@ -1,3 +1,3 @@
 # movies
 
-A new Flutter project.
+Flutter project about a movie catalog.
